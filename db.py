@@ -3,7 +3,7 @@ from bson import ObjectId
 import dns.resolver
 dns.resolver.default_resolver=dns.resolver.Resolver(configure=False)
 dns.resolver.default_resolver.nameservers=['8.8.8.8']
-client = MongoClient("mongodb+srv://nildark:nildark@cluster0.xzr3hrx.mongodb.net/")
+client = MongoClient("mongodb+srv://<db_username>:<db_password>@cluster0.xzr3hrx.mongodb.net/") # chnage db user name & password
 db = client["Movie_DB"]
 class User:
     @classmethod
